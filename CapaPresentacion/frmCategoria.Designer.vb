@@ -28,13 +28,17 @@ Partial Class frmCategoria
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.rbInactivo = New System.Windows.Forms.RadioButton()
+        Me.rbActivo = New System.Windows.Forms.RadioButton()
+        Me.txtnombre = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.dgvCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvCategoria
         '
         Me.dgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCategoria.Location = New System.Drawing.Point(487, 65)
+        Me.dgvCategoria.Location = New System.Drawing.Point(544, 65)
         Me.dgvCategoria.Name = "dgvCategoria"
         Me.dgvCategoria.RowTemplate.Height = 24
         Me.dgvCategoria.Size = New System.Drawing.Size(325, 306)
@@ -107,12 +111,64 @@ Partial Class frmCategoria
         Me.Label5.TabIndex = 37
         Me.Label5.Text = "Categoria"
         '
+        'rbInactivo
+        '
+        Me.rbInactivo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.rbInactivo.AutoSize = True
+        Me.rbInactivo.Font = New System.Drawing.Font("Gadugi", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbInactivo.ForeColor = System.Drawing.Color.White
+        Me.rbInactivo.Location = New System.Drawing.Point(431, 197)
+        Me.rbInactivo.Name = "rbInactivo"
+        Me.rbInactivo.Size = New System.Drawing.Size(93, 24)
+        Me.rbInactivo.TabIndex = 41
+        Me.rbInactivo.TabStop = True
+        Me.rbInactivo.Text = "Inactivo"
+        Me.rbInactivo.UseVisualStyleBackColor = True
+        '
+        'rbActivo
+        '
+        Me.rbActivo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.rbActivo.AutoSize = True
+        Me.rbActivo.Font = New System.Drawing.Font("Gadugi", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbActivo.ForeColor = System.Drawing.Color.White
+        Me.rbActivo.Location = New System.Drawing.Point(344, 197)
+        Me.rbActivo.Name = "rbActivo"
+        Me.rbActivo.Size = New System.Drawing.Size(81, 24)
+        Me.rbActivo.TabIndex = 40
+        Me.rbActivo.TabStop = True
+        Me.rbActivo.Text = "Activo"
+        Me.rbActivo.UseVisualStyleBackColor = True
+        '
+        'txtnombre
+        '
+        Me.txtnombre.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtnombre.Location = New System.Drawing.Point(353, 157)
+        Me.txtnombre.Name = "txtnombre"
+        Me.txtnombre.Size = New System.Drawing.Size(154, 22)
+        Me.txtnombre.TabIndex = 38
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(392, 128)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(58, 17)
+        Me.Label1.TabIndex = 42
+        Me.Label1.Text = "Nombre"
+        '
         'frmCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(918, 424)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.rbInactivo)
+        Me.Controls.Add(Me.rbActivo)
+        Me.Controls.Add(Me.txtnombre)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnEliminar)
@@ -132,4 +188,8 @@ Partial Class frmCategoria
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents rbInactivo As System.Windows.Forms.RadioButton
+    Friend WithEvents rbActivo As System.Windows.Forms.RadioButton
+    Friend WithEvents txtnombre As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

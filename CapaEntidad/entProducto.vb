@@ -55,8 +55,12 @@
             _estado = value
         End Set
     End Property
-    
+    Public Sub New()
+        objCategoria = New entCategoria
+    End Sub
 
-    
-    
+
+
+
+
 End Class

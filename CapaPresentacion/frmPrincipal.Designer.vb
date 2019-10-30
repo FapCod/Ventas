@@ -28,6 +28,11 @@ Partial Class frmPrincipal
         Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentanasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CascadaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MosaicoVerticalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MosaicoHorizontalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CerrarTodasToolStripMenuItem = New System.Windows.Forms.ToolStripSeparator()
+        Me.CerrarTodasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -36,6 +41,7 @@ Partial Class frmPrincipal
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MantenimientoToolStripMenuItem, Me.VentanasToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.MdiWindowListItem = Me.VentanasToolStripMenuItem
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(546, 28)
         Me.MenuStrip1.TabIndex = 1
@@ -51,26 +57,56 @@ Partial Class frmPrincipal
         'UsuariosToolStripMenuItem
         '
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
-        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
         '
         'CategoriasToolStripMenuItem
         '
         Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
         Me.CategoriasToolStripMenuItem.Text = "Categorias"
         '
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(155, 26)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
         'VentanasToolStripMenuItem
         '
+        Me.VentanasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CascadaToolStripMenuItem, Me.MosaicoVerticalToolStripMenuItem, Me.MosaicoHorizontalToolStripMenuItem, Me.CerrarTodasToolStripMenuItem, Me.CerrarTodasToolStripMenuItem1})
         Me.VentanasToolStripMenuItem.Name = "VentanasToolStripMenuItem"
         Me.VentanasToolStripMenuItem.Size = New System.Drawing.Size(79, 24)
         Me.VentanasToolStripMenuItem.Text = "ventanas"
+        '
+        'CascadaToolStripMenuItem
+        '
+        Me.CascadaToolStripMenuItem.Name = "CascadaToolStripMenuItem"
+        Me.CascadaToolStripMenuItem.Size = New System.Drawing.Size(211, 26)
+        Me.CascadaToolStripMenuItem.Text = "Cascada"
+        '
+        'MosaicoVerticalToolStripMenuItem
+        '
+        Me.MosaicoVerticalToolStripMenuItem.Name = "MosaicoVerticalToolStripMenuItem"
+        Me.MosaicoVerticalToolStripMenuItem.Size = New System.Drawing.Size(211, 26)
+        Me.MosaicoVerticalToolStripMenuItem.Text = "mosaico vertical"
+        '
+        'MosaicoHorizontalToolStripMenuItem
+        '
+        Me.MosaicoHorizontalToolStripMenuItem.Name = "MosaicoHorizontalToolStripMenuItem"
+        Me.MosaicoHorizontalToolStripMenuItem.Size = New System.Drawing.Size(211, 26)
+        Me.MosaicoHorizontalToolStripMenuItem.Text = "mosaico horizontal"
+        '
+        'CerrarTodasToolStripMenuItem
+        '
+        Me.CerrarTodasToolStripMenuItem.Name = "CerrarTodasToolStripMenuItem"
+        Me.CerrarTodasToolStripMenuItem.Size = New System.Drawing.Size(208, 6)
+        '
+        'CerrarTodasToolStripMenuItem1
+        '
+        Me.CerrarTodasToolStripMenuItem1.Name = "CerrarTodasToolStripMenuItem1"
+        Me.CerrarTodasToolStripMenuItem1.Size = New System.Drawing.Size(211, 26)
+        Me.CerrarTodasToolStripMenuItem1.Text = "Cerrar Todas"
         '
         'frmPrincipal
         '
@@ -95,4 +131,9 @@ Partial Class frmPrincipal
     Friend WithEvents CategoriasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VentanasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CascadaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MosaicoVerticalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MosaicoHorizontalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CerrarTodasToolStripMenuItem As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents CerrarTodasToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

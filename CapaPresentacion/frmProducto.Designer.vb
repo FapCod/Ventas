@@ -31,20 +31,27 @@ Partial Class frmProducto
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtPrecioVenta = New System.Windows.Forms.TextBox()
-        Me.txtStock = New System.Windows.Forms.TextBox()
         Me.txtPresentacion = New System.Windows.Forms.TextBox()
-        Me.chcEstado = New System.Windows.Forms.CheckBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmbCategoria = New System.Windows.Forms.ComboBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
+        Me.numPrecioVenta = New System.Windows.Forms.NumericUpDown()
+        Me.rbActivo = New System.Windows.Forms.RadioButton()
+        Me.rbInactivo = New System.Windows.Forms.RadioButton()
+        Me.dgvProducto = New System.Windows.Forms.DataGridView()
+        Me.nmStock = New System.Windows.Forms.NumericUpDown()
+        CType(Me.numPrecioVenta, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvProducto, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nmStock, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Gadugi", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
@@ -56,6 +63,8 @@ Partial Class frmProducto
         '
         'Label2
         '
+        Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Gadugi", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
@@ -67,6 +76,8 @@ Partial Class frmProducto
         '
         'Label3
         '
+        Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Gadugi", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
@@ -78,6 +89,8 @@ Partial Class frmProducto
         '
         'Label4
         '
+        Me.Label4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Gadugi", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
@@ -89,6 +102,8 @@ Partial Class frmProducto
         '
         'Label5
         '
+        Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Gadugi", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
@@ -100,6 +115,8 @@ Partial Class frmProducto
         '
         'Label6
         '
+        Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Gadugi", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
@@ -119,6 +136,8 @@ Partial Class frmProducto
         '
         'txtId
         '
+        Me.txtId.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtId.Location = New System.Drawing.Point(212, 37)
         Me.txtId.Name = "txtId"
         Me.txtId.Size = New System.Drawing.Size(154, 22)
@@ -126,46 +145,26 @@ Partial Class frmProducto
         '
         'txtNombre
         '
+        Me.txtNombre.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtNombre.Location = New System.Drawing.Point(212, 71)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(154, 22)
         Me.txtNombre.TabIndex = 8
         '
-        'txtPrecioVenta
-        '
-        Me.txtPrecioVenta.Location = New System.Drawing.Point(212, 108)
-        Me.txtPrecioVenta.Name = "txtPrecioVenta"
-        Me.txtPrecioVenta.Size = New System.Drawing.Size(154, 22)
-        Me.txtPrecioVenta.TabIndex = 9
-        '
-        'txtStock
-        '
-        Me.txtStock.Location = New System.Drawing.Point(212, 145)
-        Me.txtStock.Name = "txtStock"
-        Me.txtStock.Size = New System.Drawing.Size(154, 22)
-        Me.txtStock.TabIndex = 10
-        '
         'txtPresentacion
         '
+        Me.txtPresentacion.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtPresentacion.Location = New System.Drawing.Point(212, 178)
         Me.txtPresentacion.Name = "txtPresentacion"
         Me.txtPresentacion.Size = New System.Drawing.Size(154, 22)
         Me.txtPresentacion.TabIndex = 11
         '
-        'chcEstado
-        '
-        Me.chcEstado.AutoSize = True
-        Me.chcEstado.Font = New System.Drawing.Font("Gadugi", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.chcEstado.ForeColor = System.Drawing.Color.White
-        Me.chcEstado.Location = New System.Drawing.Point(212, 213)
-        Me.chcEstado.Name = "chcEstado"
-        Me.chcEstado.Size = New System.Drawing.Size(82, 24)
-        Me.chcEstado.TabIndex = 12
-        Me.chcEstado.Text = "Activo"
-        Me.chcEstado.UseVisualStyleBackColor = True
-        '
         'Label8
         '
+        Me.Label8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Gadugi", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
@@ -177,6 +176,8 @@ Partial Class frmProducto
         '
         'cmbCategoria
         '
+        Me.cmbCategoria.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.cmbCategoria.FormattingEnabled = True
         Me.cmbCategoria.Location = New System.Drawing.Point(212, 242)
         Me.cmbCategoria.Name = "cmbCategoria"
@@ -185,6 +186,7 @@ Partial Class frmProducto
         '
         'btnBuscar
         '
+        Me.btnBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnBuscar.BackColor = System.Drawing.Color.LightSkyBlue
         Me.btnBuscar.FlatAppearance.BorderSize = 0
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -199,6 +201,7 @@ Partial Class frmProducto
         '
         'btnEliminar
         '
+        Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnEliminar.BackColor = System.Drawing.Color.LightSkyBlue
         Me.btnEliminar.FlatAppearance.BorderSize = 0
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -213,6 +216,7 @@ Partial Class frmProducto
         '
         'btnEditar
         '
+        Me.btnEditar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnEditar.BackColor = System.Drawing.Color.LightSkyBlue
         Me.btnEditar.FlatAppearance.BorderSize = 0
         Me.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -227,6 +231,7 @@ Partial Class frmProducto
         '
         'btnAgregar
         '
+        Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnAgregar.BackColor = System.Drawing.Color.LightSkyBlue
         Me.btnAgregar.FlatAppearance.BorderSize = 0
         Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -239,22 +244,88 @@ Partial Class frmProducto
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
+        'numPrecioVenta
+        '
+        Me.numPrecioVenta.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.numPrecioVenta.DecimalPlaces = 2
+        Me.numPrecioVenta.Font = New System.Drawing.Font("Gadugi", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.numPrecioVenta.Location = New System.Drawing.Point(213, 110)
+        Me.numPrecioVenta.Name = "numPrecioVenta"
+        Me.numPrecioVenta.Size = New System.Drawing.Size(153, 30)
+        Me.numPrecioVenta.TabIndex = 19
+        '
+        'rbActivo
+        '
+        Me.rbActivo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.rbActivo.AutoSize = True
+        Me.rbActivo.Font = New System.Drawing.Font("Gadugi", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbActivo.ForeColor = System.Drawing.Color.White
+        Me.rbActivo.Location = New System.Drawing.Point(213, 210)
+        Me.rbActivo.Name = "rbActivo"
+        Me.rbActivo.Size = New System.Drawing.Size(81, 24)
+        Me.rbActivo.TabIndex = 20
+        Me.rbActivo.TabStop = True
+        Me.rbActivo.Text = "Activo"
+        Me.rbActivo.UseVisualStyleBackColor = True
+        '
+        'rbInactivo
+        '
+        Me.rbInactivo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.rbInactivo.AutoSize = True
+        Me.rbInactivo.Font = New System.Drawing.Font("Gadugi", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbInactivo.ForeColor = System.Drawing.Color.White
+        Me.rbInactivo.Location = New System.Drawing.Point(297, 210)
+        Me.rbInactivo.Name = "rbInactivo"
+        Me.rbInactivo.Size = New System.Drawing.Size(93, 24)
+        Me.rbInactivo.TabIndex = 21
+        Me.rbInactivo.TabStop = True
+        Me.rbInactivo.Text = "Inactivo"
+        Me.rbInactivo.UseVisualStyleBackColor = True
+        '
+        'dgvProducto
+        '
+        Me.dgvProducto.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvProducto.Location = New System.Drawing.Point(438, 37)
+        Me.dgvProducto.Name = "dgvProducto"
+        Me.dgvProducto.RowTemplate.Height = 24
+        Me.dgvProducto.Size = New System.Drawing.Size(639, 339)
+        Me.dgvProducto.TabIndex = 22
+        '
+        'nmStock
+        '
+        Me.nmStock.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.nmStock.DecimalPlaces = 2
+        Me.nmStock.Font = New System.Drawing.Font("Gadugi", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.nmStock.Location = New System.Drawing.Point(213, 142)
+        Me.nmStock.Name = "nmStock"
+        Me.nmStock.Size = New System.Drawing.Size(153, 30)
+        Me.nmStock.TabIndex = 23
+        '
         'frmProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(1083, 441)
+        Me.Controls.Add(Me.nmStock)
+        Me.Controls.Add(Me.dgvProducto)
+        Me.Controls.Add(Me.rbInactivo)
+        Me.Controls.Add(Me.rbActivo)
+        Me.Controls.Add(Me.numPrecioVenta)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.cmbCategoria)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.chcEstado)
         Me.Controls.Add(Me.txtPresentacion)
-        Me.Controls.Add(Me.txtStock)
-        Me.Controls.Add(Me.txtPrecioVenta)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.Label7)
@@ -266,6 +337,9 @@ Partial Class frmProducto
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmProducto"
         Me.Text = "frmProducto"
+        CType(Me.numPrecioVenta, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvProducto, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nmStock, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -279,14 +353,16 @@ Partial Class frmProducto
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtId As System.Windows.Forms.TextBox
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
-    Friend WithEvents txtPrecioVenta As System.Windows.Forms.TextBox
-    Friend WithEvents txtStock As System.Windows.Forms.TextBox
     Friend WithEvents txtPresentacion As System.Windows.Forms.TextBox
-    Friend WithEvents chcEstado As System.Windows.Forms.CheckBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents cmbCategoria As System.Windows.Forms.ComboBox
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents btnEliminar As System.Windows.Forms.Button
     Friend WithEvents btnEditar As System.Windows.Forms.Button
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
+    Friend WithEvents numPrecioVenta As System.Windows.Forms.NumericUpDown
+    Friend WithEvents rbActivo As System.Windows.Forms.RadioButton
+    Friend WithEvents rbInactivo As System.Windows.Forms.RadioButton
+    Friend WithEvents dgvProducto As System.Windows.Forms.DataGridView
+    Friend WithEvents nmStock As System.Windows.Forms.NumericUpDown
 End Class
