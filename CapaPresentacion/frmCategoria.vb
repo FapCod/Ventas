@@ -43,4 +43,12 @@ Public Class frmCategoria
         Dim objneg As New negCategoria
         dgvCategoria.DataSource = objneg.listarActivos()
     End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+
+    End Sub
 End Class

@@ -48,4 +48,42 @@ Public Class datProducto
 
     End Function
 
+    Public Function mostrar() As DataTable 'para combobox
+        Dim objdat As New datConexion
+        Dim dt As DataTable
+        Dim da As SqlDataAdapter
+        Dim cmd As New SqlCommand
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "SELECT idproducto, nomproducto from producto where estado=1"
+        objdat.Conectar("", "", True)
+        cmd.Connection = objdat.cnn
+        If cmd.ExecuteNonQuery Then
+            dt = New DataTable
+            da = New SqlDataAdapter(cmd)
+            da.Fill(dt)
+            Return dt
+        Else
+            Return Nothing
+        End If
+
+    End Function
+
+    Public Function cargar(id As String) As entProducto 'para combobox
+        Dim objdat As New datConexion
+        Dim cmd As New SqlCommand
+        Dim dr As SqlDataReader
+        Dim objent As New entProducto
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "SELECT precioventa, stock from producto where idproducto=@id"
+        cmd.Parameters.AddWithValue("@id", id)
+        objdat.Conectar("", "", True)
+        cmd.Connection = objdat.cnn
+        dr = cmd.ExecuteReader()
+        dr.Read()
+        objent.precioventa = dr.Item(0)
+        objent.stock = dr.Item(1)
+        Return objent
+    End Function
+
+
 End Class

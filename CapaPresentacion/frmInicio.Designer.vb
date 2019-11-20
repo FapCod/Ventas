@@ -67,6 +67,7 @@ Partial Class frmInicio
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(145, 28)
         Me.txtUser.TabIndex = 2
+        Me.txtUser.Text = "Fra123"
         '
         'txtPass
         '
@@ -76,6 +77,7 @@ Partial Class frmInicio
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPass.Size = New System.Drawing.Size(145, 28)
         Me.txtPass.TabIndex = 3
+        Me.txtPass.Text = "12345678"
         '
         'btnAceptar
         '

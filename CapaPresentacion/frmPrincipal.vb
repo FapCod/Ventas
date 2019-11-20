@@ -44,4 +44,9 @@
             Me.MdiChildren(0).Close()
         Next
     End Sub
+
+    Private Sub VentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentaToolStripMenuItem.Click
+        frmVenta.MdiParent = Me
+        frmVenta.Show()
+    End Sub
 End Class

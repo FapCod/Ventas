@@ -22,3 +22,4 @@ c:\users\frank\documents\visual studio 2013\Projects\Ventas\CapaPresentacion\bin
 c:\users\frank\documents\visual studio 2013\Projects\Ventas\CapaPresentacion\obj\Debug\CapaPresentacion.frmCategoria.resources
 c:\users\frank\documents\visual studio 2013\Projects\Ventas\CapaPresentacion\obj\Debug\CapaPresentacion.frmProducto.resources
 C:\Users\Frank\Documents\Visual Studio 2013\Projects\Ventas\CapaPresentacion\obj\Debug\CapaPresentacion.frmUsuario.resources
+C:\Users\Frank\Documents\Visual Studio 2013\Projects\Ventas\CapaPresentacion\obj\Debug\CapaPresentacion.frmVenta.resources

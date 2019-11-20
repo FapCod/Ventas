@@ -27,6 +27,7 @@ Public Class frmProducto
             objProEnt.estado = rbInactivo.Checked
         End If
         objProEnt.objCategoria.idcategoria = cmbCategoria.SelectedValue
+
         If objProNeg.nuevo(objProEnt) Then
             MsgBox("Registro Exitoso")
         Else : MsgBox("Error")
@@ -36,4 +37,15 @@ Public Class frmProducto
     End Sub
 
     
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+
+    End Sub
 End Class

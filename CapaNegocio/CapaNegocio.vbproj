@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="negCategoria.vb" />
+    <Compile Include="negCliente.vb" />
     <Compile Include="negProducto.vb" />
     <Compile Include="negUsuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

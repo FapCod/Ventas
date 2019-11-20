@@ -10,4 +10,14 @@ Public Class negProducto
         Dim objpro As New datProducto
         Return objpro.listar()
     End Function
+
+    Public Function mostrar() As DataTable
+        Dim objpro As New datProducto
+        Return objpro.mostrar()
+    End Function
+
+    Public Function cargar(id As String) As entProducto
+        Dim objPro As New datProducto
+        Return objPro.cargar(id)
+    End Function
 End Class

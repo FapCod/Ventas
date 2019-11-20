@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="datCategoria.vb" />
+    <Compile Include="datCliente.vb" />
     <Compile Include="datConexion.vb" />
     <Compile Include="datProducto.vb" />
     <Compile Include="datUsuario.vb" />
