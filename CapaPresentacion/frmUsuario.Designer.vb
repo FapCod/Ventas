@@ -27,7 +27,7 @@ Partial Class frmUsuario
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.chcEstado = New System.Windows.Forms.CheckBox()
-        Me.txtPrecioVenta = New System.Windows.Forms.TextBox()
+        Me.txtclave = New System.Windows.Forms.TextBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -35,8 +35,10 @@ Partial Class frmUsuario
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.tipoUser = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.dgvUsers = New System.Windows.Forms.DataGridView()
+        CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnBuscar
@@ -107,12 +109,12 @@ Partial Class frmUsuario
         Me.chcEstado.Text = "Activo"
         Me.chcEstado.UseVisualStyleBackColor = True
         '
-        'txtPrecioVenta
+        'txtclave
         '
-        Me.txtPrecioVenta.Location = New System.Drawing.Point(218, 190)
-        Me.txtPrecioVenta.Name = "txtPrecioVenta"
-        Me.txtPrecioVenta.Size = New System.Drawing.Size(154, 22)
-        Me.txtPrecioVenta.TabIndex = 27
+        Me.txtclave.Location = New System.Drawing.Point(218, 190)
+        Me.txtclave.Name = "txtclave"
+        Me.txtclave.Size = New System.Drawing.Size(154, 22)
+        Me.txtclave.TabIndex = 27
         '
         'txtNombre
         '
@@ -183,14 +185,14 @@ Partial Class frmUsuario
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "IdUsuario"
         '
-        'ComboBox1
+        'tipoUser
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Adminstrador", "Empleado"})
-        Me.ComboBox1.Location = New System.Drawing.Point(218, 227)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(154, 24)
-        Me.ComboBox1.TabIndex = 35
+        Me.tipoUser.FormattingEnabled = True
+        Me.tipoUser.Items.AddRange(New Object() {"Adminstrador", "Empleado"})
+        Me.tipoUser.Location = New System.Drawing.Point(218, 227)
+        Me.tipoUser.Name = "tipoUser"
+        Me.tipoUser.Size = New System.Drawing.Size(154, 24)
+        Me.tipoUser.TabIndex = 35
         '
         'Label5
         '
@@ -203,20 +205,30 @@ Partial Class frmUsuario
         Me.Label5.TabIndex = 36
         Me.Label5.Text = "Agregar Usuario"
         '
+        'dgvUsers
+        '
+        Me.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvUsers.Location = New System.Drawing.Point(467, 63)
+        Me.dgvUsers.Name = "dgvUsers"
+        Me.dgvUsers.RowTemplate.Height = 24
+        Me.dgvUsers.Size = New System.Drawing.Size(564, 360)
+        Me.dgvUsers.TabIndex = 37
+        '
         'frmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(1043, 466)
+        Me.Controls.Add(Me.dgvUsers)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.tipoUser)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnEditar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.chcEstado)
-        Me.Controls.Add(Me.txtPrecioVenta)
+        Me.Controls.Add(Me.txtclave)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.Label6)
@@ -226,6 +238,7 @@ Partial Class frmUsuario
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmUsuario"
         Me.Text = "frmUsuario"
+        CType(Me.dgvUsers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -235,7 +248,7 @@ Partial Class frmUsuario
     Friend WithEvents btnEditar As System.Windows.Forms.Button
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
     Friend WithEvents chcEstado As System.Windows.Forms.CheckBox
-    Friend WithEvents txtPrecioVenta As System.Windows.Forms.TextBox
+    Friend WithEvents txtclave As System.Windows.Forms.TextBox
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents txtId As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
@@ -243,6 +256,7 @@ Partial Class frmUsuario
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents tipoUser As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents dgvUsers As System.Windows.Forms.DataGridView
 End Class

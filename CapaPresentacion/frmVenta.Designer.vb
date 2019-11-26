@@ -28,14 +28,14 @@ Partial Class frmVenta
         Me.FileSystemWatcher1 = New System.IO.FileSystemWatcher()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtIdCliente = New System.Windows.Forms.TextBox()
+        Me.txtnomCliente = New System.Windows.Forms.TextBox()
+        Me.dgvcliente = New System.Windows.Forms.DataGridView()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.cmbTipoDoc = New System.Windows.Forms.ComboBox()
+        Me.cmbEstadoDoc = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.dgvDetalle = New System.Windows.Forms.DataGridView()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
@@ -44,11 +44,11 @@ Partial Class frmVenta
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.cmbProducto = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtMontoTotal = New System.Windows.Forms.TextBox()
         Me.btnGuardar = New System.Windows.Forms.Button()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvcliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label5
@@ -106,32 +106,35 @@ Partial Class frmVenta
         Me.Label2.TabIndex = 42
         Me.Label2.Text = "Cliente"
         '
-        'TextBox1
+        'txtIdCliente
         '
-        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtIdCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TextBox1.Location = New System.Drawing.Point(147, 122)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(50, 22)
-        Me.TextBox1.TabIndex = 43
+        Me.txtIdCliente.Location = New System.Drawing.Point(147, 122)
+        Me.txtIdCliente.Name = "txtIdCliente"
+        Me.txtIdCliente.ReadOnly = True
+        Me.txtIdCliente.Size = New System.Drawing.Size(50, 22)
+        Me.txtIdCliente.TabIndex = 43
         '
-        'TextBox2
+        'txtnomCliente
         '
-        Me.TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtnomCliente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Location = New System.Drawing.Point(215, 124)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(283, 22)
-        Me.TextBox2.TabIndex = 44
+        Me.txtnomCliente.Location = New System.Drawing.Point(215, 124)
+        Me.txtnomCliente.Name = "txtnomCliente"
+        Me.txtnomCliente.Size = New System.Drawing.Size(283, 22)
+        Me.txtnomCliente.TabIndex = 44
         '
-        'DataGridView1
+        'dgvcliente
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(41, 152)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(679, 22)
-        Me.DataGridView1.TabIndex = 45
+        Me.dgvcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvcliente.Location = New System.Drawing.Point(41, 152)
+        Me.dgvcliente.Name = "dgvcliente"
+        Me.dgvcliente.ReadOnly = True
+        Me.dgvcliente.RowTemplate.Height = 24
+        Me.dgvcliente.Size = New System.Drawing.Size(679, 147)
+        Me.dgvcliente.TabIndex = 45
+        Me.dgvcliente.Visible = False
         '
         'Label3
         '
@@ -144,21 +147,22 @@ Partial Class frmVenta
         Me.Label3.TabIndex = 47
         Me.Label3.Text = "TipoDoc"
         '
-        'ComboBox1
+        'cmbTipoDoc
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(193, 216)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox1.TabIndex = 48
+        Me.cmbTipoDoc.FormattingEnabled = True
+        Me.cmbTipoDoc.Items.AddRange(New Object() {"Boleta", "Factura"})
+        Me.cmbTipoDoc.Location = New System.Drawing.Point(193, 216)
+        Me.cmbTipoDoc.Name = "cmbTipoDoc"
+        Me.cmbTipoDoc.Size = New System.Drawing.Size(121, 24)
+        Me.cmbTipoDoc.TabIndex = 48
         '
-        'ComboBox3
+        'cmbEstadoDoc
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(520, 216)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox3.TabIndex = 62
+        Me.cmbEstadoDoc.FormattingEnabled = True
+        Me.cmbEstadoDoc.Location = New System.Drawing.Point(520, 216)
+        Me.cmbEstadoDoc.Name = "cmbEstadoDoc"
+        Me.cmbEstadoDoc.Size = New System.Drawing.Size(180, 24)
+        Me.cmbEstadoDoc.TabIndex = 62
         '
         'Label6
         '
@@ -171,14 +175,14 @@ Partial Class frmVenta
         Me.Label6.TabIndex = 61
         Me.Label6.Text = "Estado"
         '
-        'DataGridView2
+        'dgvDetalle
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(63, 407)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowTemplate.Height = 24
-        Me.DataGridView2.Size = New System.Drawing.Size(679, 147)
-        Me.DataGridView2.TabIndex = 58
+        Me.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDetalle.Location = New System.Drawing.Point(63, 407)
+        Me.dgvDetalle.Name = "dgvDetalle"
+        Me.dgvDetalle.RowTemplate.Height = 24
+        Me.dgvDetalle.Size = New System.Drawing.Size(657, 147)
+        Me.dgvDetalle.TabIndex = 58
         '
         'Label8
         '
@@ -258,20 +262,20 @@ Partial Class frmVenta
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Gadugi", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(439, 557)
+        Me.Label7.Location = New System.Drawing.Point(428, 570)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(179, 34)
         Me.Label7.TabIndex = 69
         Me.Label7.Text = "Monto Total"
         '
-        'TextBox3
+        'txtMontoTotal
         '
-        Me.TextBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtMontoTotal.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.TextBox3.Location = New System.Drawing.Point(613, 567)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(129, 22)
-        Me.TextBox3.TabIndex = 70
+        Me.txtMontoTotal.Location = New System.Drawing.Point(613, 580)
+        Me.txtMontoTotal.Name = "txtMontoTotal"
+        Me.txtMontoTotal.Size = New System.Drawing.Size(129, 22)
+        Me.txtMontoTotal.TabIndex = 70
         '
         'btnGuardar
         '
@@ -293,8 +297,9 @@ Partial Class frmVenta
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(977, 634)
+        Me.Controls.Add(Me.dgvcliente)
         Me.Controls.Add(Me.btnGuardar)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtMontoTotal)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.cmbProducto)
         Me.Controls.Add(Me.btnAgregar)
@@ -302,25 +307,25 @@ Partial Class frmVenta
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.ComboBox3)
+        Me.Controls.Add(Me.cmbEstadoDoc)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.dgvDetalle)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cmbTipoDoc)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtnomCliente)
+        Me.Controls.Add(Me.txtIdCliente)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtidVenta)
         Me.Controls.Add(Me.Label5)
         Me.Name = "frmVenta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmVenta"
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvcliente, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvDetalle, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -329,24 +334,24 @@ Partial Class frmVenta
     Friend WithEvents txtidVenta As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents FileSystemWatcher1 As System.IO.FileSystemWatcher
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents dgvcliente As System.Windows.Forms.DataGridView
+    Friend WithEvents txtnomCliente As System.Windows.Forms.TextBox
+    Friend WithEvents txtIdCliente As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents txtPrecio As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents txtCantidad As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbEstadoDoc As System.Windows.Forms.ComboBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents dgvDetalle As System.Windows.Forms.DataGridView
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cmbTipoDoc As System.Windows.Forms.ComboBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents cmbProducto As System.Windows.Forms.ComboBox
     Friend WithEvents btnAgregar As System.Windows.Forms.Button
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents txtMontoTotal As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
 End Class

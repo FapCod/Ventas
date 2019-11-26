@@ -301,7 +301,6 @@ Partial Class frmProducto
         '
         Me.nmStock.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.nmStock.DecimalPlaces = 2
         Me.nmStock.Font = New System.Drawing.Font("Gadugi", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.nmStock.Location = New System.Drawing.Point(213, 142)
         Me.nmStock.Name = "nmStock"

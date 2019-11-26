@@ -45,10 +45,22 @@ Public Class frmCategoria
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
-
+        Dim id As Integer
+        Dim i As Integer
+        i = dgvCategoria.CurrentRow.Index
+        id = dgvCategoria.Item(0, i).Value()
+        Dim objneg As New negCategoria
+        Dim verificar = objneg.Eliminar(id)
+        If (verificar) Then
+            MsgBox("ELIMINACION EXITOSA")
+            dgvCategoria.DataSource = objneg.listarActivos()
+        End If
     End Sub
 
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-
+        Dim objneg As New negCategoria
+        Dim id As Integer
+        id = Val(txtid.Text)
+        dgvCategoria.DataSource = objneg.listar(id)
     End Sub
 End Class

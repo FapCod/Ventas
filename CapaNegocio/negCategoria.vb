@@ -9,9 +9,13 @@ Public Class negCategoria
         Dim objdat As New datCategoria
         Return objdat.editar(objent)
     End Function
-    Public Function listar() As DataTable
+    Public Function Eliminar(id As Integer) As Boolean
+        Dim objdat As New datCategoria
+        Return objdat.eliminar(id)
+    End Function
+    Public Function listar(id As Integer) As DataTable
         Dim objCat As New datCategoria
-        Return objCat.listar()
+        Return objCat.listar(id)
     End Function
     Public Function listarActivos() As DataTable
         Dim objCat As New datCategoria

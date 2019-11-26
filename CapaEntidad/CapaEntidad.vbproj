@@ -63,8 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="entCategoria.vb" />
+    <Compile Include="entDetalleVenta.vb" />
     <Compile Include="entProducto.vb" />
     <Compile Include="entUsuario.vb" />
+    <Compile Include="entVenta.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

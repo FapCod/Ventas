@@ -32,6 +32,8 @@ Partial Class frmCategoria
         Me.rbActivo = New System.Windows.Forms.RadioButton()
         Me.txtnombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtid = New System.Windows.Forms.TextBox()
+        Me.ID = New System.Windows.Forms.Label()
         CType(Me.dgvCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -160,12 +162,33 @@ Partial Class frmCategoria
         Me.Label1.TabIndex = 42
         Me.Label1.Text = "Nombre"
         '
+        'txtid
+        '
+        Me.txtid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtid.Location = New System.Drawing.Point(314, 301)
+        Me.txtid.Name = "txtid"
+        Me.txtid.Size = New System.Drawing.Size(154, 22)
+        Me.txtid.TabIndex = 43
+        '
+        'ID
+        '
+        Me.ID.AutoSize = True
+        Me.ID.ForeColor = System.Drawing.Color.White
+        Me.ID.Location = New System.Drawing.Point(320, 281)
+        Me.ID.Name = "ID"
+        Me.ID.Size = New System.Drawing.Size(21, 17)
+        Me.ID.TabIndex = 44
+        Me.ID.Text = "ID"
+        '
         'frmCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
         Me.ClientSize = New System.Drawing.Size(918, 424)
+        Me.Controls.Add(Me.ID)
+        Me.Controls.Add(Me.txtid)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.rbInactivo)
         Me.Controls.Add(Me.rbActivo)
@@ -193,4 +216,6 @@ Partial Class frmCategoria
     Friend WithEvents rbActivo As System.Windows.Forms.RadioButton
     Friend WithEvents txtnombre As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtid As System.Windows.Forms.TextBox
+    Friend WithEvents ID As System.Windows.Forms.Label
 End Class
