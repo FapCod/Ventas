@@ -28,28 +28,63 @@ Public Class datVenta
         Return False
     End Function
 
-    Public Function detalleVenta(objent As entDetalleVenta) As Boolean
-        Try
-            Dim objdao As New datConexion
-            Dim cmd As New SqlCommand
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.CommandText = "registrarDV"
-            cmd.Parameters.AddWithValue("@idproducto", objent.idproducto)
-            cmd.Parameters.AddWithValue("@idventa", objent.idventa)
-            cmd.Parameters.AddWithValue("@cantidad", objent.cantidad)
-            cmd.Parameters.AddWithValue("@costo", objent.costo)
-            objdao.Conectar("", "", True)
-            cmd.Connection = objdao.cnn
-            If cmd.ExecuteNonQuery Then
-                Return True
-            Else
-                Return Nothing
-            End If
+    Public Function listar() As DataTable
+        Dim objdat As New datConexion
+        Dim dt As DataTable
+        Dim da As SqlDataAdapter
+        Dim cmd As New SqlCommand
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "listarventa"
+        objdat.Conectar("", "", True)
+        cmd.Connection = objdat.cnn
+        If cmd.ExecuteNonQuery Then
+            dt = New DataTable
+            da = New SqlDataAdapter(cmd)
+            da.Fill(dt)
+            Return dt
+        Else
+            Return Nothing
+        End If
 
-        Catch ex As Exception
-            MsgBox("error ex" + ex.Message)
-        End Try
+    End Function
+    Public Function listardgv(id As Integer) As DataTable
+        Dim objdat As New datConexion
+        Dim dt As DataTable
+        Dim da As SqlDataAdapter
+        Dim cmd As New SqlCommand
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "buscardt"
+        cmd.Parameters.AddWithValue("@idventa", id)
+        objdat.Conectar("", "", True)
+        cmd.Connection = objdat.cnn
+        If cmd.ExecuteNonQuery Then
+            dt = New DataTable
+            da = New SqlDataAdapter(cmd)
+            da.Fill(dt)
+            Return dt
+        Else
+            Return Nothing
+        End If
 
-        Return False
+    End Function
+    Public Function buscar(id As Integer) As DataTable
+        Dim objdat As New datConexion
+        Dim dt As DataTable
+        Dim da As SqlDataAdapter
+        Dim cmd As New SqlCommand
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "buscarVentas"
+        cmd.Parameters.AddWithValue("@idventa", id)
+        objdat.Conectar("", "", True)
+        cmd.Connection = objdat.cnn
+        If cmd.ExecuteNonQuery Then
+            dt = New DataTable
+            da = New SqlDataAdapter(cmd)
+            da.Fill(dt)
+            Return dt
+        Else
+            Return Nothing
+        End If
+
     End Function
 End Class

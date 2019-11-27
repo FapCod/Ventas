@@ -3,6 +3,7 @@
     Private _idventa
     Private _cantidad
     Private _costo
+
    
     Public Property idproducto As String
         Get
@@ -37,4 +38,5 @@
             _costo = value
         End Set
     End Property
+    
 End Class

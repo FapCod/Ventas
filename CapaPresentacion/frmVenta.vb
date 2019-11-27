@@ -79,8 +79,33 @@ Public Class frmVenta
         objentVenta.tipodoc = tipodoc
         objentVenta.monto = monto
         objentVenta.estado = estado
+        ''Metodo de ingreso con lista sin verificar
+        'Dim lisVenta As New List(Of entDetalleVenta)
+        ' ''llenar datos al detalle venta
+        'Dim objentDV As New entDetalleVenta
+        'For a = 0 To dgvDetalle.Rows.Count - 2
+        '    objentDV.idventa = Integer.Parse(txtidVenta.Text)
+        '    objentDV.idproducto = dgvDetalle.Rows.Item(a).Cells(0).Value.ToString
+        '    objentDV.cantidad = dgvDetalle.Rows.Item(a).Cells(2).Value
+        '    objentDV.costo = dgvDetalle.Rows.Item(a).Cells(3).Value
+        '    MsgBox(objentDV.idproducto)
+        '    lisVenta.Add(objentDV)
+        'Next
+        'objentVenta.detallev = lisVenta
+        'Dim objnegventa As New negVenta
+        'Dim validar = objnegventa.nuevaVenta(objentVenta)
+        'If (validar) Then
+        '    MsgBox("Venta registrada")
+        '    limpiarDatos()
+        'Else
+        '    MsgBox("Error")
+        'End If
+
+
+
+
         Dim objnegventa As New negVenta
-        'MsgBox(objentVenta.fecha)
+        ''MsgBox(objentVenta.fecha)
         If dgvDetalle.Rows.Count > 1 Then
             Dim validar = objnegventa.nuevaVenta(objentVenta)
             If (validar) Then
@@ -152,4 +177,33 @@ Public Class frmVenta
         dgvDetalle.Rows.Clear()
     End Sub
 
+    
+    Private Sub btnListar_Click(sender As Object, e As EventArgs) Handles btnListar.Click
+        Dim objneg As New negVenta
+        DataGridView1.DataSource = objneg.listar()
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim objneg As New negVenta
+        Dim id As Integer
+        id = Val(txtidventab.Text)
+        DataGridView1.DataSource = objneg.buscar(id)
+    End Sub
+
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+        Dim objneg As New negVenta
+        Dim id As Integer
+        Dim i As Integer
+        i = DataGridView1.CurrentRow.Index
+        id = DataGridView1.Item(0, i).Value()
+        txtidVenta.Text = DataGridView1.Item(0, i).Value()
+        DateTimePicker1.Text = DataGridView1.Item(1, i).Value()
+        txtIdCliente.Text = DataGridView1.Item(2, i).Value()
+        cmbTipoDoc.Text = DataGridView1.Item(3, i).Value()
+        cmbEstadoDoc.Text = DataGridView1.Item(5, i).Value()
+        txtMontoTotal.Text = DataGridView1.Item(4, i).Value()
+        txtnomCliente.Text = DataGridView1.Item(6, i).Value()
+        dgvDetalle.Columns.Clear()
+        dgvDetalle.DataSource = objneg.listardgv(id)
+    End Sub
 End Class

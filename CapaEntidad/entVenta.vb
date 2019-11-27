@@ -5,6 +5,7 @@
     Private _tipodoc
     Private _monto
     Private _estado
+    Public detallev As New List(Of entDetalleVenta)
     Public Property idventa As Integer
         Get
             Return _idventa
@@ -53,4 +54,7 @@
             _estado = value
         End Set
     End Property
+    Public Sub New()
+        detallev = New List(Of entDetalleVenta)
+    End Sub
 End Class

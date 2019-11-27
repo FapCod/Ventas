@@ -46,9 +46,14 @@ Partial Class frmVenta
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtMontoTotal = New System.Windows.Forms.TextBox()
         Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnListar = New System.Windows.Forms.Button()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtidventab = New System.Windows.Forms.TextBox()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvcliente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvDetalle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label5
@@ -284,19 +289,69 @@ Partial Class frmVenta
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Gadugi", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
-        Me.btnGuardar.Location = New System.Drawing.Point(777, 43)
+        Me.btnGuardar.Location = New System.Drawing.Point(772, 12)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(166, 45)
         Me.btnGuardar.TabIndex = 71
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
         '
+        'btnListar
+        '
+        Me.btnListar.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.btnListar.FlatAppearance.BorderSize = 0
+        Me.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnListar.Font = New System.Drawing.Font("Gadugi", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnListar.ForeColor = System.Drawing.Color.White
+        Me.btnListar.Location = New System.Drawing.Point(964, 12)
+        Me.btnListar.Name = "btnListar"
+        Me.btnListar.Size = New System.Drawing.Size(166, 45)
+        Me.btnListar.TabIndex = 72
+        Me.btnListar.Text = "Listar"
+        Me.btnListar.UseVisualStyleBackColor = False
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.LightSkyBlue
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Font = New System.Drawing.Font("Gadugi", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.ForeColor = System.Drawing.Color.White
+        Me.btnBuscar.Location = New System.Drawing.Point(1159, 12)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(166, 45)
+        Me.btnBuscar.TabIndex = 73
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(726, 92)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 24
+        Me.DataGridView1.Size = New System.Drawing.Size(606, 180)
+        Me.DataGridView1.TabIndex = 74
+        '
+        'txtidventab
+        '
+        Me.txtidventab.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtidventab.Location = New System.Drawing.Point(1171, 64)
+        Me.txtidventab.Name = "txtidventab"
+        Me.txtidventab.Size = New System.Drawing.Size(154, 22)
+        Me.txtidventab.TabIndex = 75
+        '
         'frmVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.DodgerBlue
-        Me.ClientSize = New System.Drawing.Size(977, 634)
+        Me.ClientSize = New System.Drawing.Size(1356, 634)
+        Me.Controls.Add(Me.txtidventab)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.btnBuscar)
+        Me.Controls.Add(Me.btnListar)
         Me.Controls.Add(Me.dgvcliente)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.txtMontoTotal)
@@ -326,6 +381,7 @@ Partial Class frmVenta
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvcliente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvDetalle, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -354,4 +410,8 @@ Partial Class frmVenta
     Friend WithEvents txtMontoTotal As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents btnGuardar As System.Windows.Forms.Button
+    Friend WithEvents btnListar As System.Windows.Forms.Button
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents btnBuscar As System.Windows.Forms.Button
+    Friend WithEvents txtidventab As System.Windows.Forms.TextBox
 End Class

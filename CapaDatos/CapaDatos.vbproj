@@ -65,6 +65,7 @@
     <Compile Include="datCategoria.vb" />
     <Compile Include="datCliente.vb" />
     <Compile Include="datConexion.vb" />
+    <Compile Include="datDetalleVenta.vb" />
     <Compile Include="datProducto.vb" />
     <Compile Include="datUsuario.vb" />
     <Compile Include="datVenta.vb" />

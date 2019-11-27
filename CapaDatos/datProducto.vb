@@ -71,9 +71,8 @@ Public Class datProducto
             End If
 
         Catch ex As Exception
-            MsgBox("error ex" + ex.Message)
+            MsgBox("El producto no se puede registrar porque " + ex.Message)
         End Try
-
         Return False
     End Function
     Public Function listar() As DataTable
